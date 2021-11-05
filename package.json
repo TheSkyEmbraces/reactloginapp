@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
+    "concurrently": "^6.3.0",
     "cookie-parser": "^1.4.5",
     "create-react-app": "^4.0.3",
     "express": "^4.17.1",
@@ -22,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "backend": "nodemon server/index.js",
-    "frontend": "npm run start --perfix client"
+    "frontend": "npm run start --perfix client",
+    "dev":"concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
   "eslintConfig": {
     "extends": [
@@ -30,7 +32,7 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
+  "browserslist": { 
     "production": [
       ">0.2%",
       "not dead",
